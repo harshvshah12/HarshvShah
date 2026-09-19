@@ -43,14 +43,16 @@
       <div class="hero-art reveal">
         <div class="terminal">
           <div class="terminal-top"><span></span><span></span><span></span><small>harsh@portfolio ~</small></div>
-          <div class="terminal-body">
-            <p><i>01</i> <b>whoami</b></p>
-            <p class="accent">harsh_vipul_shah</p>
-            <p><i>02</i> <b>focus --now</b></p>
-            <p class="dim">deep-learning / data / products</p>
-            <p><i>03</i> <b>status</b></p>
-            <p class="success">building · learning · shipping</p>
-            <span class="cursor"></span>
+          <div class="terminal-body" id="portfolio-terminal" tabindex="0" aria-label="Interactive portfolio terminal">
+            <div class="terminal-output" id="terminal-output">
+              <p><i>01</i> <b>whoami</b></p>
+              <p class="accent">harsh_vipul_shah</p>
+              <p><i>02</i> <b>focus --now</b></p>
+              <p class="dim">deep-learning / data / products</p>
+              <p><i>03</i> <b>status</b></p>
+              <p class="success">building · learning · shipping</p>
+            </div>
+            <div class="terminal-input-row"><span class="prompt">harsh@portfolio:~$</span><input id="terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal command" placeholder="type help..." /></div>
           </div>
         </div>
       </div>
