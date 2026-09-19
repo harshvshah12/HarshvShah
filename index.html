@@ -1,77 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harsh V Shah | Portfolio</title>
+  <meta name="theme-color" content="#08090c">
+  <meta name="description" content="Portfolio of Harsh Vipul Shah, B.Tech CSE (AI & DS) student at MIT World Peace University.">
+  <title>Harsh Vipul Shah | AI/ML • Data • Software</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
-
 <body>
-  <header>
-    <div class="container">
-      <h1>Harsh V Shah</h1>
-      <p>Second Year BTech CSE (AI & DS) | MIT World Peace University, Pune</p>
-      <nav>
-  <button onclick="showSection('about')">About</button>
-  <button onclick="showSection('projects')">Projects</button>
-  <button onclick="showSection('skills')">Skills</button>
-  <button onclick="showSection('contact')">Contact</button>
-</nav>
+  <div class="noise"></div>
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
 
-    </div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Harsh Vipul Shah home">
+      <span class="brand-mark">HS</span>
+      <span>harsh<span class="muted">.shah</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#stack">Stack</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="https://github.com/harshvshah12" target="_blank" rel="noreferrer">GitHub ↗</a>
   </header>
 
-  <main class="container">
-    <section id="about" class="content-section">
-      <h2>About Me</h2>
-<br>
-      <p>Hi, I'm Harsh V Shah — an enthusiastic second-year student pursuing BTech in Computer Science (AI & DS) at MIT World Peace University, Pune. I’m passionate about building practical, impactful solutions with a fusion of software and electronics. I’m actively involved in Synapse AI Club and Prismlabs, and currently have maintained a CGPA of 8.5.</p>
-      <br><p><strong>Current Skills:</strong> Python, C, SQL, HTML</p><br>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/harsh-vipul-shah/" target="_blank">harsh-vipul-shah</a> | <strong>HackerRank:</strong> <a href="https://www.hackerrank.com/profile/HarshvShah" target="_blank">HarshvShah</a></p>
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse"></span> 3rd year · MIT-WPU · Pune</div>
+        <h1>Building at the intersection of <em>AI, data</em> and software.</h1>
+        <p class="hero-lede">I'm Harsh Vipul Shah, a B.Tech CSE (AI & DS) student who likes turning technical ideas into useful, well-designed systems.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">Explore projects <span>↓</span></a>
+          <a class="button ghost" href="https://www.linkedin.com/in/harsh-vipul-shah/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+        <div class="hero-meta"><span>CGPA 8.2 / 10</span><span>AI/ML · Analytics · Software</span><span>Open to opportunities</span></div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="terminal">
+          <div class="terminal-top"><span></span><span></span><span></span><small>harsh@portfolio ~</small></div>
+          <div class="terminal-body">
+            <p><i>01</i> <b>whoami</b></p>
+            <p class="accent">harsh_vipul_shah</p>
+            <p><i>02</i> <b>focus --now</b></p>
+            <p class="dim">deep-learning / data / products</p>
+            <p><i>03</i> <b>status</b></p>
+            <p class="success">building · learning · shipping</p>
+            <span class="cursor"></span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="projects" class="content-section hidden">
-      <h2>Projects</h2><br>
-
-      <h3>Coding Projects</h3>
-      <ul>
-        <li><strong>Bug</strong> – A personal voice assistant built with MIT App Inventor's Block programming, capable of executing simple voice commands.</li>
-        <li><strong>ClassLink</strong> – A clean, user-friendly web portal that helped school students join online classes effortlessly.</li>
-        <li><strong>Elect.io</strong> – A GUI-based school election system created with Tkinter, allowing secure digital voting for students.</li>
-        <li><strong>Semantris Clone</strong> – A fun and interactive Python-based word association game inspired by Google’s AI experiment - Semantris, featuring real-time file handling.</li>
-        <li><strong>GestureVolume</strong> – A computer vision system to control system volume using hand gestures, implemented using OpenCV and Mediapipe.</li>
-      </ul><br>
-
-      <h3>Electronics Projects</h3>
-      <ul>
-        <li><strong>PowerStride</strong> – Smart piezoelectric shoes that generate electricity from footsteps, ideal for charging small devices on the go.</li>
-        <li><strong>Sunchaser</strong> – A 2-axis solar tracker that dynamically aligns with the sun to ensure optimal energy generation.</li><br>
-      </ul>
-
-      <h3>Currently Working On</h3>
-      <ul>
-        <li><strong>DriveOPT</strong> – A self-driving car simulation project using Carla simulator, focusing on obstacle detection, path planning, and autonomous navigation.</li>
-      </ul>
+    <section id="about" class="section-shell section">
+      <div class="section-label">01 / about</div>
+      <div class="about-grid">
+        <div><h2>Curious by default.<br><span>Practical by design.</span></h2></div>
+        <div class="about-copy">
+          <p>I'm currently in my third year of Computer Science (AI & Data Science) at MIT World Peace University. My work spans machine learning, computer vision, data analytics and full-stack development.</p>
+          <p>Outside coursework, I work with Team Vegapod Hyperloop on business development, sponsorships, airline partnerships, sourcing and international competition logistics. I also help run technical learning initiatives through Synapse AI Club.</p>
+          <div class="stat-row"><div><strong>8.2</strong><span>CGPA / 10</span></div><div><strong>3rd</strong><span>year, B.Tech</span></div><div><strong>5+</strong><span>featured builds</span></div></div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="content-section hidden">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> harshvshah2019@gmail.com</p>
-      <p><strong>Location:</strong> Pune, Maharashtra, India</p>
+    <section id="experience" class="section-shell section">
+      <div class="section-label">02 / experience</div>
+      <div class="section-heading"><h2>Where I've been<br><span>putting it to work.</span></h2></div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-date">AUG 2025 — SEP 2026</div><div class="timeline-line"></div>
+          <div><h3>Business Associate <small>Team Vegapod Hyperloop · MIT-WPU</small></h3><p>Business and sponsorship outreach, airline partnerships, component purchasing, material sourcing, accommodation arrangements, sponsor communication and budget coordination for an international Hyperloop team.</p><div class="tags"><span>Business Development</span><span>Sponsorship</span><span>Logistics</span></div></div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">JUN 2025 — JUL 2025</div><div class="timeline-line"></div>
+          <div><h3>Data Analysis Intern <small>Linde Engineering India Pvt. Ltd.</small></h3><p>Built Power BI reports and dashboards, explored data models for HR-oriented insights, and worked with React JS and Apryse WebViewer in document-centric enterprise workflows.</p><div class="tags"><span>Power BI</span><span>Data Analysis</span><span>React</span></div></div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">JAN 2025 — SEP 2026</div><div class="timeline-line"></div>
+          <div><h3>Organizing Team Member <small>Synapse AI Club · MIT-WPU</small></h3><p>Helped execute an 8-session AI, Data Science and NLP workshop series through ideation, marketing, logistics and speaker coordination.</p><div class="tags"><span>AI / NLP</span><span>Events</span><span>Community</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section-shell section">
+      <div class="section-label">03 / selected work</div>
+      <div class="section-heading split"><div><h2>Recent work<br><span>worth a closer look.</span></h2></div><p>Projects from my current portfolio, followed by an archive of earlier builds.</p></div>
+      <div class="project-grid featured">
+        <article class="project-card featured-card">
+          <div class="project-image"><img src="https://raw.githubusercontent.com/harshvshah12/Deepfake-Sentinel/main/index.html" alt="" onerror="this.style.display='none'"><div class="visual deepfake"><span>REAL</span><b>?</b><span>FAKE</span></div></div>
+          <div class="project-content"><div class="project-kicker">01 · COMPUTER VISION</div><h3>Deepfake Sentinel</h3><p>Multimodal synthetic-media detection and digital provenance platform combining spatial models, FFT analysis, biometric cues, provenance checks, explainability and adversarial testing.</p><div class="tags"><span>ViT</span><span>EfficientNet</span><span>MTCNN</span><span>Grad-CAM</span><span>FastAPI</span></div><a class="project-link" href="https://github.com/harshvshah12/Deepfake-Sentinel" target="_blank" rel="noreferrer">View repository ↗</a></div>
+        </article>
+        <article class="project-card">
+          <div class="project-image"><img src="https://raw.githubusercontent.com/harshvshah12/Musically/main/docs/screenshots/01-home-dashboard.png" alt="Musically dashboard screenshot" loading="lazy"></div>
+          <div class="project-content"><div class="project-kicker">02 · WEB AUDIO</div><h3>4SOHA / Musically</h3><p>React-based music experience with synchronized lyrics, audio visualization, taste profiling, responsive glassmorphic UI and shareable story cards.</p><div class="tags"><span>React 19</span><span>TypeScript</span><span>Web Audio</span><span>Playwright</span></div><a class="project-link" href="https://github.com/harshvshah12/Musically" target="_blank" rel="noreferrer">View repository ↗</a></div>
+        </article>
+        <article class="project-card">
+          <div class="project-image"><div class="visual parking"><span>OCCUPANCY</span><strong>74%</strong><small>LIVE ANALYTICS</small></div></div>
+          <div class="project-content"><div class="project-kicker">03 · COMPUTER VISION</div><h3>ParkSense</h3><p>Parking detection and analytics workflow for vehicle occupancy, capacity tracking and spatial heatmaps, backed by a web dashboard.</p><div class="tags"><span>YOLOv8</span><span>FastAPI</span><span>Next.js</span><span>Vision</span></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-image"><div class="visual pricing"><span>PRICE ENGINE</span><strong>₹ 4,860</strong><small>ENSEMBLE PREDICTION</small></div></div>
+          <div class="project-content"><div class="project-kicker">04 · MACHINE LEARNING</div><h3>Dynamic Hotel Pricing</h3><p>Analytics-focused pricing system using multiple ML models and ensemble learning to estimate dynamic hotel prices.</p><div class="tags"><span>Python</span><span>ML</span><span>Ensembling</span><span>Analytics</span></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-image"><div class="visual gesture"><span>ESP32-CAM</span><strong>GESTURE</strong><small>MEDIA PIPE + RF</small></div></div>
+          <div class="project-content"><div class="project-kicker">05 · EDGE AI</div><h3>ESP32-CAM Gesture Recognition</h3><p>Hybrid computer-vision and machine-learning gesture recognition system with an interactive React dashboard.</p><div class="tags"><span>ESP32-CAM</span><span>MediaPipe</span><span>Random Forest</span><span>React</span></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-image"><div class="visual maze"><span>A*</span><span>BFS</span><span>DFS</span><small>PATH FOUND</small></div></div>
+          <div class="project-content"><div class="project-kicker">06 · ALGORITHMS</div><h3>Maze Algorithm Visualizer</h3><p>Interactive Python GUI for animated pathfinding with A*, BFS and DFS, plus history and algorithm comparison.</p><div class="tags"><span>Python</span><span>Tkinter</span><span>A*</span><span>BFS</span></div></div>
+        </article>
+      </div>
+
+      <div class="archive-heading"><span>Archive</span><small>Earlier projects, kept for the record.</small></div>
+      <div class="archive-grid">
+        <article><span>01</span><div><h3>Bug</h3><p>Voice assistant built with MIT App Inventor block programming.</p></div></article>
+        <article><span>02</span><div><h3>ClassLink</h3><p>Web portal designed to help school students join online classes.</p></div></article>
+        <article><span>03</span><div><h3>Elect.io</h3><p>Tkinter-based digital school election system.</p></div></article>
+        <article><span>04</span><div><h3>Semantris Clone</h3><p>Python word-association game inspired by Google's AI experiment.</p></div></article>
+        <article><span>05</span><div><h3>GestureVolume</h3><p>OpenCV and MediaPipe hand-gesture volume controller.</p></div></article>
+        <article><span>06</span><div><h3>PowerStride</h3><p>Piezoelectric footwear concept for harvesting energy from footsteps.</p></div></article>
+        <article><span>07</span><div><h3>Sunchaser</h3><p>Two-axis solar tracker for improved solar alignment.</p></div></article>
+        <article><span>08</span><div><h3>DriveOPT</h3><p>CARLA-based autonomous driving simulation exploring perception and navigation.</p></div></article>
+      </div>
+    </section>
+
+    <section id="stack" class="section-shell section">
+      <div class="section-label">04 / toolkit</div>
+      <div class="stack-grid">
+        <div><h2>Tools I use<br><span>to make things real.</span></h2></div>
+        <div class="skills">
+          <div><label>LANGUAGES</label><p>Python · C · SQL · HTML</p></div>
+          <div><label>AI / ML</label><p>Machine Learning · Deep Learning · Computer Vision · YOLOv8 · MediaPipe · OpenCV</p></div>
+          <div><label>DATA</label><p>Power BI · Tableau · Data Visualization · Data Modeling</p></div>
+          <div><label>WEB / BACKEND</label><p>React · Next.js · FastAPI · Streamlit · Firebase · Supabase</p></div>
+          <div><label>TOOLS / SDKs</label><p>Git · GitHub · Apryse WebViewer · Tkinter</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell achievements">
+      <div class="section-label">05 / highlights</div>
+      <div class="achievement-grid">
+        <div><span>2026</span><h3>EHW 2026 · Vegapod Hyperloop</h3><p>#8 globally, top nominees for Outreach & Showcasing, and recipient of the Upcoming Engineering Innovation Award.</p></div>
+        <div><span>2026</span><h3>iQOO Hackathon</h3><p>Team ranked 22 among 1,500+ participating teams.</p></div>
+        <div><span>2025</span><h3>Pinnacle Coding Competition</h3><p>Advanced to Round 2 in DSA (Python), competing against 4th-year students.</p></div>
+        <div><span>2025</span><h3>SciQuest</h3><p>Recognized for Project Excellence.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-shell contact-section">
+      <div class="contact-inner">
+        <div><div class="section-label">06 / contact</div><h2>Have something<br><span>interesting in mind?</span></h2><p>I'm always interested in good technical problems, collaborations and opportunities to build.</p></div>
+        <div class="contact-links">
+          <a href="mailto:harshvshah2019@gmail.com"><small>EMAIL</small><strong>harshvshah2019@gmail.com ↗</strong></a>
+          <a href="https://www.linkedin.com/in/harsh-vipul-shah/" target="_blank" rel="noreferrer"><small>LINKEDIN</small><strong>harsh-vipul-shah ↗</strong></a>
+          <a href="https://github.com/harshvshah12" target="_blank" rel="noreferrer"><small>GITHUB</small><strong>harshvshah12 ↗</strong></a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Harsh V Shah. All rights reserved.</p>
-    </div>
-     </footer>
+  <footer><div class="section-shell footer-inner"><span>© 2026 Harsh Vipul Shah</span><span>Built with HTML · CSS · JavaScript</span></div></footer>
 </body>
-
 </html>
-
-
-
