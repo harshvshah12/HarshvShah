@@ -1,16 +1,1 @@
-function showSection(id) {
-  const sections = document.querySelectorAll('section');
-  sections.forEach(section => {
-    section.classList.remove('active');
-    section.classList.add('hidden');
-  });
-  const target = document.getElementById(id);
-  if (target) {
-    target.classList.remove('hidden');
-    target.classList.add('active');
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  showSection('about');
-});
+document.addEventListener("DOMContentLoaded",()=>{const links=[...document.querySelectorAll('.nav a')];const sections=[...document.querySelectorAll('section[id]')];const io=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));}})},{rootMargin:'-35% 0px -55% 0px'});sections.forEach(s=>io.observe(s));document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const el=document.querySelector(a.getAttribute('href'));if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}}));});
