@@ -204,7 +204,11 @@ function setupCarousel(){
 
 function setupMotion(){
   const gsap=window.gsap,ST=window.ScrollTrigger;
-  if(!gsap||!ST||reduced)return;
+  if(!gsap||!ST||reduced){
+    document.querySelectorAll(".manifesto-line").forEach(line=>{line.style.opacity="1";line.style.transform="none";});
+    if(!gsap||!ST) window.addEventListener("load",()=>{ if(window.gsap&&window.ScrollTrigger) setupMotion(); },{once:true});
+    return;
+  }
   gsap.registerPlugin(ST);
   gsap.utils.toArray(".section-label,.section-heading,.timeline-item,.about-copy,.skills>div,.achievement-grid>div,.contact-inner").forEach(el=>{
     gsap.fromTo(el,{y:32,opacity:0},{y:0,opacity:1,duration:.85,ease:"power3.out",scrollTrigger:{trigger:el,start:"top 88%",once:true}});
