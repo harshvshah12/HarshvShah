@@ -83,8 +83,36 @@ function render(){
   camera.position.x+=(smoothPointer.x*.32+(desktop?0.4:0)-camera.position.x)*.025;
   camera.position.y+=(smoothPointer.y*.2-camera.position.y)*.025;
   camera.position.z=12-scrollProgress*1.8;
-  camera.lookAt(desktop?.6:0,0,0);
+  camera.lookAt(desktop ? 0.6 : 0,0,0);
   renderer.render(scene,camera);
+}
+
+
+function setupHeroCarousel(){
+  const title=$("#hero-project-title"),description=$("#hero-project-description"),category=$("#hero-project-category"),number=$("#hero-project-number"),link=$("#hero-project-link"),next=$("#hero-next-project"),stage=$(".hero-project-copy");
+  if(!title||!stage)return;
+  const items=[
+    {name:"Deepfake Sentinel",category:"AI / COMPUTER VISION",description:"Multimodal synthetic-media detection and digital provenance platform, combining visual models, forensic signals and explainability.",url:"https://github.com/harshvshah12/Deepfake-Sentinel"},
+    {name:"VegaPod Hyperloop",category:"ENGINEERING / 3D WEB",description:"An interactive engineering portal presenting the Hyperloop pod, technical systems, team and competition journey.",url:"https://vegapod-hyperloop.vercel.app"},
+    {name:"Musically",category:"WEB / INTERACTIVE EXPERIENCE",description:"A personalized music experience with synchronized lyrics, audio visualization and shareable story cards.",url:"https://musically-iota.vercel.app"},
+    {name:"ParkSense AI",category:"COMPUTER VISION / FULL STACK",description:"An intelligent parking detection and analytics system built around vehicle occupancy, capacity tracking and spatial insights.",url:"#projects"},
+    {name:"ConnectSphere",category:"FULL STACK / SOCIAL",description:"A college-focused social platform for interest-based matching and consent-first communication.",url:"#projects"},
+    {name:"TRACE",category:"MACHINE LEARNING / DATA VISUALIZATION",description:"A student trajectory intelligence platform for academic outcome analysis and counterfactual exploration.",url:"https://trace-umber-delta.vercel.app"}
+  ];
+  let index=0,start=0,down=false;
+  const render=()=>{
+    const p=items[index];
+    title.textContent=p.name;description.textContent=p.description;category.textContent=p.category;
+    number.textContent=String(index+1).padStart(2,"0")+" / 06";
+    link.href=p.url;link.textContent=p.url==="#projects"?"VIEW PROJECT DETAILS ↘":"DISCOVER PROJECT ↗";
+    if(window.gsap&&!reduced)window.gsap.fromTo([title,description],{y:16,opacity:.25},{y:0,opacity:1,duration:.45,stagger:.06,ease:"power2.out"});
+  };
+  const move=dir=>{index=(index+dir+items.length)%items.length;render()};
+  next?.addEventListener("click",()=>move(1));
+  stage.addEventListener("pointerdown",ev=>{if(ev.target.closest("a,button"))return;down=true;start=ev.clientX;stage.setPointerCapture(ev.pointerId)});
+  stage.addEventListener("pointerup",ev=>{if(!down)return;down=false;const dx=ev.clientX-start;if(Math.abs(dx)>45)move(dx<0?1:-1)});
+  stage.addEventListener("pointercancel",()=>{down=false});
+  render();
 }
 
 function setupIntro(){
@@ -169,5 +197,6 @@ function setupMotion(){
 const ok=initScene();
 if(ok){setLoad(55,"BUILDING GEOMETRY");render();}
 setupIntro();
+setupHeroCarousel();
 setupCarousel();
 setupMotion();
