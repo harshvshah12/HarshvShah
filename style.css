@@ -272,3 +272,12 @@ body:before{opacity:.06}
 .contact-inner{border-radius:0;background:#101722;border:1px solid rgba(210,225,245,.16)}
 .footer-inner{border-color:rgba(210,225,245,.15)}
 @media(max-width:760px){.hero-copy{width:100%}.project-card{grid-template-columns:1fr;gap:20px}.project-image{min-height:220px}.story-section{min-height:110svh}.story-lines p{font-size:clamp(37px,10vw,60px)}}
+
+.hero-project-copy{width:min(520px,48vw);padding-top:4vh}
+.hero-project-meta{display:flex;justify-content:space-between;max-width:420px;margin:44px 0 18px;padding-top:12px;border-top:1px solid rgba(215,230,250,.24);font:9px "DM Mono",monospace;letter-spacing:.16em;color:#aab7c8}
+.hero-project-copy h1{font-size:clamp(42px,6.2vw,86px);line-height:.98;min-height:2em;margin:0 0 22px}
+.hero-project-copy .hero-lede{min-height:4.2em;max-width:420px}
+.hero-project-copy .hero-readout{max-width:420px}
+.hero-project-copy .button{cursor:pointer}
+@media(max-width:900px){.hero-project-copy{width:min(620px,100%)}.hero-project-meta{margin-top:32px}}
+@media(max-width:560px){.hero-project-copy h1{font-size:clamp(40px,11vw,62px)}.hero-project-meta{margin-top:24px}.hero-project-copy .hero-readout{gap:12px}}
